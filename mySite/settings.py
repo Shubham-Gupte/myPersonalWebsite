@@ -25,7 +25,7 @@ SECRET_KEY = '2z(lpdfe=i)57quq1ckj=k54x2t2==33coei#t0%v%rmu^=t=#'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'gupte.me']
+ALLOWED_HOSTS = ['127.0.0.1', 'gupte.me', '59264e6d.ngrok.io']
 
 
 # Application definition
@@ -120,3 +120,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+    #'/var/www/static/',
+]
