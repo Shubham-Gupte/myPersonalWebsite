@@ -11,8 +11,28 @@
       <title>{% block title %}{% endblock %}</title>
    </head>
    <body>
+     <!-- Nav bar -->
+     <ul>
+       <li>
+         Home
+       </li>
+       <li>
+         Projects
+       </li>
+       <li>
+         Blog
+       </li>
+       <li>
+         Contact Me
+       </li>
+     </ul>
+     <!-- End Nav -->
 {% block content %}
 {% endblock %}
-
+<footer class="footer">
+      <div class="container">
+        <p class="text-muted">Place sticky footer content here.</p>
+      </div>
+    </footer>
 </body>
 </html>
