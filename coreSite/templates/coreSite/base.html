@@ -1,13 +1,14 @@
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
+{% load static %}
+<link href="{% static 'coreSite/css/bootstrap.min.css' %}" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="{% static 'coreSite/js/bootstrap.min.js' %}"></script>
+{% block links %}
+{% endblock %}
 <html>
    <head>
+     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>{% block title %}{% endblock %}</title>
    </head>
    <body>
@@ -23,6 +24,9 @@
          Blog
        </li>
        <li>
+         Hobbies
+       </li>
+       <li>
          Contact Me
        </li>
      </ul>
@@ -30,8 +34,27 @@
 {% block content %}
 {% endblock %}
 <footer class="footer">
-      <div class="container">
-        <p class="text-muted">Place sticky footer content here.</p>
+      <div class="container" style="display: inline">
+        <p>
+          Created by Shubham Gupte
+        </p>
+        <ul>
+          <li>
+            Home
+          </li>
+          <li>
+            Projects
+          </li>
+          <li>
+            Blog
+          </li>
+          <li>
+            Hobbies
+          </li>
+          <li>
+            Contact Me
+          </li>
+        </ul>
       </div>
     </footer>
 </body>
