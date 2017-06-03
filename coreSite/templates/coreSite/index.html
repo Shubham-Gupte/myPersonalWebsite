@@ -1,8 +1,10 @@
 {% load static %}
 <link rel="stylesheet" href="{% static 'coreSite/home.css' %}" type="text/css" />
 <link href="{% static 'coreSite/css/bootstrap.min.css' %}" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:500" rel="stylesheet">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="{% static 'coreSite/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'coreSite/js/home.js' %}"></script>
 <html>
    <head>
      <meta charset="utf-8">
@@ -11,6 +13,7 @@
       <title>Home</title>
    </head>
    <body>
+     <div id= "cover"></div>
 
      <nav class="navbar navbar-default navbar-fixed-top" id = "homeNav">
      <div class="container">
@@ -21,65 +24,27 @@
            <span class="icon-bar"></span>
            <span class="icon-bar"></span>
          </button>
-         <a class="navbar-brand" href="#">Shubham Gupte</a>
+         <a class="navbar-brand" href="#" id ="topText">Shubham Gupte</a>
        </div>
-       <div id="navbar" class="navbar-collapse collapse">
-         <ul class="nav navbar-nav navbar-right">
-           <li><a href="../navbar/">Projects</a></li>
-           <li><a href="../navbar-static-top/">Blog</a></li>
-           <li><a href="./">Hobbies </a></li>
-           <li><a href="../navbar/">Contact Me</a></li>
+       <div id="navbar" class="navbar-collapse collapse" id ="topText">
+         <ul class="nav navbar-nav navbar-right" >
+           <li><a href="../navbar/" id ="topText">Projects  </a></li>
+           <li><a href="../navbar-static-top/" id ="topText">Blog  </a></li>
+           <li><a href="./" id ="topText">Hobbies  </a></li>
+           <li><a href="../navbar/" id ="topText">Contact Me  </a></li>
          </ul>
        </div><!--/.nav-collapse -->
      </div>
    </nav>
    <div class="bg">
-
    </div>
 
-     <!-- Nav bar
-     <ul>
-       <li>
-         Home
-       </li>
-       <li>
-         Projects
-       </li>
-       <li>
-         Blog
-       </li>
-       <li>
-         Hobbies
-       </li>
-       <li>
-         Contact Me
-       </li>
-     </ul>
-     End Nav -->
 
-<footer class="footer">
-      <div class="container" style="display: inline">
-        <p>
-          Created by Shubham Gupte
-        </p>
-        <ul>
-          <li>
-            Home
-          </li>
-          <li>
-            Projects
-          </li>
-          <li>
-            Blog
-          </li>
-          <li>
-            Hobbies
-          </li>
-          <li>
-            Contact Me
-          </li>
-        </ul>
-      </div>
-    </footer>
+
+   <footer class="footer navbar-fixed-bottom" id = "homeFoot">
+        <div class="container" id ="topText">
+          <span class="text-muted">Place sticky footer content here.</span>
+        </div>
+      </footer>
 </body>
 </html>

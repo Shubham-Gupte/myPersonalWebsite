@@ -1,6 +1,7 @@
 #homeNav{
   background-color: transparent;
   border: 0;
+  color: white;
 }
 
 body, html {
@@ -9,7 +10,7 @@ body, html {
 
 .bg {
     /* The image used */
-    background-image: url("background.jpg");
+    background-image: url("background1.jpg");
 
     /* Full height */
     height: 100%;
@@ -19,3 +20,28 @@ body, html {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+#homeFoot {
+  background-color: transparent;
+
+}
+#cover {
+    background: url("loading.gif") no-repeat scroll center center #FFF;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+#topText{
+  text-decoration: none;
+  color: white;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1.5em;
+}
+#topText:hover{
+   border-bottom: 4px solid red;
+   transition: 0.4s;
+}
+#topText:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
