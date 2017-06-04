@@ -5,46 +5,70 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="{% static 'coreSite/js/bootstrap.min.js' %}"></script>
 <script src="{% static 'coreSite/js/home.js' %}"></script>
+<link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
+<style type="text/css">
+   .mobileHide { display: inline;}
+   /* Smartphone Portrait and Landscape */
+   @media only screen
+   and (min-device-width : 320px)
+   and (max-device-width : 480px){  .mobileHide { display: none;}}
+</style>
+<style type="text/css">
+   .mobileShow { display: none;}
+   /* Smartphone Portrait and Landscape */
+   @media only screen
+   and (min-device-width : 320px)
+   and (max-device-width : 480px){ .mobileShow { display: inline;}}
+</style>
 <html>
-   <head>
-     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Home</title>
-   </head>
-   <body>
-     <div id= "cover"></div>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Home</title>
+    </head>
+    <body>
+        <div id= "cover"></div>
+        <nav class="navbar navbar-default navbar-fixed-top" id = "homeNav">
+            <div class="container">
+                <div class="navbar-header">
+                    <button id="mobileButton" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#" id ="topText">Shubham Gupte</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse" id ="topText">
+                    <ul class="nav navbar-nav navbar-right" >
+                        <li><a href="../navbar/" id ="topText">Projects  </a></li>
+                        <li><a href="../navbar-static-top/" id ="topText">Blog  </a></li>
+                        <li><a href="./" id ="topText">Hobbies  </a></li>
+                        <li><a href="../navbar/" id ="topText">Contact Me  </a></li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+        </nav>
+        <div class="bg">
+          <div class="container">
 
-     <nav class="navbar navbar-default navbar-fixed-top" id = "homeNav">
-     <div class="container">
-       <div class="navbar-header">
-         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-           <span class="sr-only">Toggle navigation</span>
-           <span class="icon-bar"></span>
-           <span class="icon-bar"></span>
-           <span class="icon-bar"></span>
-         </button>
-         <a class="navbar-brand" href="#" id ="topText">Shubham Gupte</a>
-       </div>
-       <div id="navbar" class="navbar-collapse collapse" id ="topText">
-         <ul class="nav navbar-nav navbar-right" >
-           <li><a href="../navbar/" id ="topText">Projects  </a></li>
-           <li><a href="../navbar-static-top/" id ="topText">Blog  </a></li>
-           <li><a href="./" id ="topText">Hobbies  </a></li>
-           <li><a href="../navbar/" id ="topText">Contact Me  </a></li>
-         </ul>
-       </div><!--/.nav-collapse -->
-     </div>
-   </nav>
-   <div class="bg">
-   </div>
+            <div class="row">
+  <div class="col-md-5 pull-right mobileHide" ><h1 id= "abovePic"></h1></div>
+</div>
+</div>
+<div class="container">
 
-
-
-   <footer class="footer navbar-fixed-bottom" id = "homeFoot">
-        <div class="container" id ="topText">
-          <span class="text-muted">Place sticky footer content here.</span>
+  <div class="row">
+<div><h1 id= "abovePic2" class="mobileShow"></h1></div>
+</div>
+</div>
         </div>
-      </footer>
-</body>
+        <footer class="footer navbar-fixed-bottom" id = "homeFoot">
+            <div class="container">
+                <span >Created by Shubham Gupte.</span>
+            </div>
+        </footer>
+    </body>
 </html>

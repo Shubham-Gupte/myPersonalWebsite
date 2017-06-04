@@ -19,10 +19,13 @@ body, html {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-}
 
+}
 #homeFoot {
-  background-color: transparent;
+  text-decoration: none;
+  color: white;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1.5em;
 
 }
 #cover {
@@ -45,3 +48,21 @@ body, html {
   visibility: visible;
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
+}
+#abovePic{
+padding-top: 16%;
+position: absolute;
+color: white;
+font-family: 'Courgette', cursive;
+font-size: 4em;
+text-align: right;
+}
+#abovePic2{
+padding-top: 16%;
+padding-left: 11%;
+position: absolute;
+color: white;
+font-family: 'Courgette', cursive;
+font-size: 4em;
+text-align: right;
+}
