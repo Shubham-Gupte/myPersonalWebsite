@@ -1,68 +1,77 @@
-#homeNav{
-  background-color: transparent;
-  border: 0;
-  color: white;
+#homeNav {
+	background-color: transparent;
+	border: 0;
+	color: white;
 }
 
-body, html {
-    height: 100%;
+body,
+html {
+	height: 100%;
 }
 
 .bg {
-    /* The image used */
-    background-image: url("background1.jpg");
-
-    /* Full height */
-    height: 100%;
-
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
+	/* The image used */
+	background-image: url("background1.jpg");
+	/* Full height */
+	height: 100%;
+	/* Center and scale the image nicely */
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
+
 #homeFoot {
-  text-decoration: none;
-  color: white;
-  font-family: 'Roboto Mono', monospace;
-  font-size: 1.5em;
+	text-decoration: none;
+	color: white;
+	font-family: 'Roboto Mono', monospace;
+	font-size: 1.5em;
+}
 
-}
 #cover {
-    background: url("loading.gif") no-repeat scroll center center #FFF;
-    position: absolute;
-    height: 100%;
-    width: 100%;
+	background: url("loading.gif") no-repeat scroll center center #FFF;
+	position: absolute;
+	height: 100%;
+	width: 100%;
 }
-#topText{
-  text-decoration: none;
-  color: white;
-  font-family: 'Roboto Mono', monospace;
-  font-size: 1.5em;
+
+#topText {
+	text-decoration: none;
+	color: white;
+	font-family: 'Roboto Mono', monospace;
+	font-size: 1.5em;
 }
-#topText:hover{
-   border-bottom: 4px solid red;
-   transition: 0.4s;
+
+#topText:hover {
+	border-bottom: 4px solid red;
+	transition: 0.4s;
 }
+
 #topText:hover:before {
-  visibility: visible;
-  -webkit-transform: scaleX(1);
-  transform: scaleX(1);
+	visibility: visible;
+	-webkit-transform: scaleX(1);
+	transform: scaleX(1);
 }
-#abovePic{
-padding-top: 16%;
-position: absolute;
-color: white;
-font-family: 'Courgette', cursive;
-font-size: 4em;
-text-align: right;
+
+#abovePic {
+	padding-top: 16%;
+	position: absolute;
+	color: white;
+	font-family: 'Courgette', cursive;
+	font-size: 4em;
+	text-align: right;
 }
-#abovePic2{
-padding-top: 16%;
-padding-left: 11%;
-position: absolute;
-color: white;
-font-family: 'Courgette', cursive;
-font-size: 4em;
-text-align: right;
+
+#abovePic2 {
+	padding-top: 16%;
+	padding-left: 11%;
+	position: absolute;
+	color: white;
+	font-family: 'Courgette', cursive;
+	font-size: 4em;
+}
+
+@media (min-width:961px) {
+	#abovePic2 {
+		opacity: 0;
+	}
 }
