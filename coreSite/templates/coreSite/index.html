@@ -38,14 +38,15 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#" id ="topText">Shubham Gupte</a>
+                    <a class="navbar-brand" href="{% url 'home' %}" id ="topText">Shubham Gupte</a>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse" id ="topText">
                     <ul class="nav navbar-nav navbar-right" >
+                      <li><a href="../navbar/" id ="topText">About </a></li>
                         <li><a href="../navbar/" id ="topText">Projects  </a></li>
                         <li><a href="../navbar-static-top/" id ="topText">Blog  </a></li>
-                        <li><a href="./" id ="topText">Hobbies  </a></li>
-                        <li><a href="../navbar/" id ="topText">Contact Me  </a></li>
+                        <li><a href="{% url 'contact' %}" id ="topText">Contact</a></li>
+                        <li><a href="#" id ="topText">Hire</a></li>
                     </ul>
                 </div>
                 <!--/.nav-collapse -->
