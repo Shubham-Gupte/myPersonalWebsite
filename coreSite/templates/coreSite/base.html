@@ -14,10 +14,18 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
       <title>{% block title %}{% endblock %}</title>
    </head>
-   <body>
+   <body class="container-fluid">
      <div id="jsWrapper">
      <div>
      <!-- Nav bar -->
+     {% for message in messages %}
+  <div class="alert {{ message.tags }} alert-dismissible" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    {{ message }}
+  </div>
+{% endfor %}
      <nav class="navbar navbar-default navbar-fixed-top" id = "homeNav">
          <div class="container">
              <div class="navbar-header">
@@ -45,11 +53,7 @@
      <!-- End Nav -->
 {% block content %}
 {% endblock %}
-<footer class="footer navbar-fixed-bottom" id = "homeFoot">
-    <div class="container">
-        <span >Created by Shubham Gupte.</span>
-    </div>
-</footer>
+
 </div>
 </body>
 </html>

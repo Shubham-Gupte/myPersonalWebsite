@@ -1,3 +1,23 @@
 a#topText.Contact {
   color:red;
 }
+#contactImage{
+  border: 0px;
+}
+#titleText{
+  text-align: center;
+}
+#contactText{
+  color:#0057A9;
+  font-family: 'Roboto Condensed', sans-serif;
+  text-align: center;
+}
+h3{
+  color: #EA9213;
+  font-family: 'Roboto Condensed', sans-serif;
+  text-align: center;
+}
+#content{
+  text-align: center;
+  
+}
