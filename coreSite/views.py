@@ -1,6 +1,8 @@
 from django.shortcuts import render
+from django.http import HttpResponse
 from .forms import ContactForm
-
+from django.contrib import messages
+from .functions import sendEmail
 # Create your views here.
 def home(request):
     return render(request, 'coreSite/index.html', {})
@@ -9,6 +11,10 @@ def contact(request):
         form = ContactForm(request.POST)
         if form.is_valid():
             #flash send message
+            email = form.cleaned_data['sender']
+            subject = form.cleaned_data['subject']
+            message = form.cleaned_data['message']
+            sendEmail(email, subject, message)
             messages.success(request, 'Your message was sent successfully!')
         else:
             #flash finish all parts of the forms

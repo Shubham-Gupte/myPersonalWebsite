@@ -1,4 +1,5 @@
 {% load static %}
+<link rel="shortcut icon" href="{%  static 'coreSite/images/favicon.ico' %}">
 <link href="{% static 'coreSite/css/bootstrap.min.css' %}" rel="stylesheet">
 <link href="{% static 'coreSite/css/custom.css' %}" rel="stylesheet">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -19,7 +20,7 @@
      <div>
      <!-- Nav bar -->
      {% for message in messages %}
-  <div class="alert {{ message.tags }} alert-dismissible" role="alert">
+  <div class="alert {{ message.tags }} alert-dismissible" role="alert" style="text-align:center">
     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
       <span aria-hidden="true">&times;</span>
     </button>

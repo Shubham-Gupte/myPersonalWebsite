@@ -4,6 +4,11 @@ $(document).ready(function() {
     e.preventDefault();
     newLocation = this.href;
     $('body').fadeOut('slow', newpage);
+
+  });
+  $("#mailer").click(function(e){
+    location.reload();
+      window.location.href = "mailto:shubham@gupte.me";
   });
 
   function newpage() {
