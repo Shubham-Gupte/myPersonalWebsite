@@ -4,19 +4,7 @@ $(document).ready(function() {
     e.preventDefault();
     newLocation = this.href;
     $('body').fadeOut('slow', newpage);
-    $('history').pushState({}, '', '/newpage');
-  });
-$(window).on('popstate',function(event) {
-      var state = e.originalEvent.state;
-      if ( state === null ) {
-        console.log("Hello");
-        function reload(){location.reload();}
-          reload();
-      } else {
-          console.log("Hello");
-        function reload(){location.reload();}
-          reload();
-      }
+
   });
   $("#mailer").click(function(e){
     location.reload();
@@ -28,13 +16,13 @@ $(window).on('popstate',function(event) {
   }
 
   function Reload() {
-try {
-var headElement = document.getElementsByTagName("head")[0];
-if (headElement && headElement.innerHTML)
-headElement.innerHTML += "<meta http-equiv=\"refresh\" content=\"1\">";
-}
-catch (e) {}
-}
+    try {
+      var headElement = document.getElementsByTagName("head")[0];
+      if (headElement && headElement.innerHTML)
+        headElement.innerHTML += "<meta http-equiv=\"refresh\" content=\"1\">";
+    } catch (e) {}
+  }
+
   /*! Reloads on every visit in mobile safari */
   if ((/iphone|ipod|ipad.*os 5/gi).test(navigator.appVersion)) {
     window.onpageshow = function(evt) {
