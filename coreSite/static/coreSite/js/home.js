@@ -4,6 +4,18 @@ $(window).load(function() {
             $('#cover').fadeOut(800);
         }, 800);
 });
+$(window).on('popstate',function(event) {
+    var state = e.originalEvent.state;
+    if ( state === null ) {
+      console.log("Hello");
+      function reload(){location.reload();}
+        reload();
+    } else {
+      console.log("Hello");
+      function reload(){location.reload();}
+        reload();
+    }
+});
 $(document).ready(function() {
 
     $('#abovePic').hide();
@@ -61,6 +73,7 @@ $(document).ready(function() {
         e.preventDefault();
         newLocation = this.href;
         $('body').fadeOut('slow', newpage);
+        $('history').pushState({}, '', '/newpage');
     });
 
     function newpage() {
