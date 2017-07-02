@@ -1,33 +1,28 @@
 {% extends 'coreSite/base.html' %} {% load staticfiles %} {% block title %} Contact Me {% endblock %} {% block links %}
 <link rel="stylesheet" type="text/css" href="{% static 'coreSite/css/contact.css' %}" /> {% endblock %} {% block content %}
-<div class="text-center">
-  <img src="{% static 'coreSite/images/contactImage.png'%}" class="img-thumbnail" id="contactImage">
+<div class="text-left">
+<h1 style="font-family: 'Roboto Condensed', sans-serif;color:white;font-size:8em;">  <img src="{% static 'coreSite/images/contactImage.png'%}" class="img-thumbnail" id="contactImage" align="middle">
+  Contact</h1>
 </div>
-<h2 id="titleText">Feel Free to Contact Me. </h2>
+<br>
 <div class="row">
-  <div class="col-md-6" id="content">
-    <h1 style="font-family: 'Roboto Condensed', sans-serif;"> Send me a quick message</h1>
+  <div class="col-md-2"></div>
+  <div class="col-md-4" id="content">
+    <h1 style="font-family: 'Roboto Condensed', sans-serif;"> Send me a quick message!</h1>
     <form action="/ContactMe/" method="post">
       {% csrf_token %}
-      <h3 style="display:inline">
-        Email:
-      </h3>{{ form.sender }}
+      <div id="formField">{{ form.sender }}</div>
         <br />
         <br />
-        <h3 style="display:inline">
-        Subject:
-      </h3>
-      {{ form.subject }}
+    <div id="formField">  {{ form.subject }}</div>
     <br />
-    <h3>
-      Message:
-    </h3>
-      {{ form.message }}
+    <br>
+      <div id="formField">{{ form.message }}</div>
       <br />
       <input type="submit" value="Submit" id="submitButton"/>
   </form>
   </div>
-  <div class="col-md-6">
+  <div class="col-md-4">
     <h3>Email:</h3>
     <a id="mailer">
       <p id="contactText">
@@ -52,5 +47,6 @@
 	margin-right: auto;
 	display: block;"/></a>
   </div>
+  <div class="col-md-2">
 </div>
 {% endblock %}
