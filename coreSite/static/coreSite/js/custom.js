@@ -1,5 +1,11 @@
 $(document).ready(function() {
   $('#jsWrapper').hide(0).delay(100).fadeIn(1000);
+  $('#resume').click(function(e) {
+    e.preventDefault();
+    newLocation = this.href;
+    $('body').fadeOut('slow', newpage);
+
+  });
   $('a').click(function(e) {
     e.preventDefault();
     newLocation = this.href;
