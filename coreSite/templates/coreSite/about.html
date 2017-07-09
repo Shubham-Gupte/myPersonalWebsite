@@ -1,8 +1,6 @@
 {% extends 'coreSite/base.html' %} {% load staticfiles %} {% block title %} About Me {% endblock %} {% block links %}
-<link rel="stylesheet" type="text/css" href="{% static 'coreSite/css/about.css' %}" /> {% endblock %} {% block content %}
-<style media="screen">
-body{ font-family: 'Roboto Condensed', sans-serif;}
-</style>
+<link rel="stylesheet" type="text/css" href="{% static 'coreSite/css/about.css' %}" />
+{% endblock %} {% block content %}
 <style type="text/css">
     .mobileHide { display: inline;}
     /* Smartphone Portrait and Landscape */
@@ -17,55 +15,61 @@ body{ font-family: 'Roboto Condensed', sans-serif;}
     and (min-device-width : 320px)
     and (max-device-width : 480px){ .mobileShow { display: inline;}}
 </style>
-<div class="col-md-1"></div>
-<div class="col-md-10">
+<div id="redabout">
+  <div id="redcol" class="col-md-12">
+  <div id="redcol" class="col-md-1"></div>
+  <div id="redcol" class="col-md-8">
+    <h2>Quick Rundown</h2>
+    <p>
+      I'm a college student from Atlanta attending Gergia Tech for Computational Media. During high school, I learned some programming from robotics as well as some basic web development. I enjoy programming, especially working on sites such as this one or just learning. If there isn't something I know, I am always eager to learn. If you'd like to see what I'm up to, be sure to check out my blog posts. If you'd like to work on a project, let's talk. :)
+    </p>
+    <p>
+      Click here for some more stuff about me :)
+    </p>
+  </div>
+  <div id="redcol" class="col-md-3">
+    <img src="{% static 'coreSite/images/gt.png'%}"/>
+  </div>
+  </div>
+</div>
+<div id="blueabout">
+  <div id="bluecol" class="col-md-12">
+  <div id="bluecol" class="col-md-1"></div>
+  <div id="bluecol" class="col-md-9">
+    <h1>Skills</h1>
+    <ul>
+      <li>
+        Web Development
+      </li>
+      <li>
+        Django
+      </li>
+      <li>
+        POSTGRE SQL
+      </li>
+      <li>
+        Basic Robotics
+      </li>
+      <li> Amateur Film-maker</li>
+      <li>
+        Basic 3D modeling
+      </li>
+    </ul>
+  </div>
+  <div id="bluecol" class="col-md-2"></div>
+  </div>
+</div>
+<div id="greenabout">
+  <div id="greencol" class="col-md-12">
+  <div id="greencol" class="col-md-1"> </div>
+  <div id="greencol" class="col-md-9"><h1>Resume</h1>
+  <h4>Here is my resume:</h4>
+  <iframe src="https://docs.google.com/document/d/1I69Fo2EG_zR0XbW29sfnJmJWJO0LARwpW9cfoP7b8SI/pub?embedded=true"style="tewidth:80%;height:100%"class="mobileHide"></iframe>
 
-
-<div>
-<h1 style="text-align:center;"><u>About me</u></h1>
-<div style="background-color:#456990">
-<h3>Quick Rundown</h3>
-<p>
-  I'm a college student from Atlanta attending Georgia Tech for Computer Science. I grew up in the Lilburn/ Stone Mountain area and went to GSMST for high school. During high school, I learned some programming from robotics as well as some basic web development. I enjoy programming, especially working on sites such as this one or just learning. If there isn't something I know, I am always eager to learn. If you'd like to see what I'm up to, be sure to check out my blog posts. If you'd like to work on a project, let's talk. :)
-</p>
-<p>
-  Click here for some more stuff about me :)
-</p>
+  <p>
+    Click <a href="" id="resume" onclick='window.open("https://docs.google.com/document/d/1I69Fo2EG_zR0XbW29sfnJmJWJO0LARwpW9cfoP7b8SI/edit?usp=sharing");return false;'>here</a> for a downloadable copy
+  </p></div>
+  <div id="greencol" class="col-md-2"></div>
+  </div>
 </div>
-</div>
-<div style="background-color:#f45b69">
-<h1 style="text-align:center;">Skills</h1>
-<ul>
-  <li>
-    Web Development
-  </li>
-  <li>
-    Django
-  </li>
-  <li>
-    POSTGRE SQL
-  </li>
-  <li>
-    Basic Robotics
-  </li>
-  <li> Amateur Film Maker</li>
-  <li>
-    Basic 3D modeling
-  </li>
-</ul>
-</div>
-<div>
-<h1 style="text-align:center;">Resume</h1>
-<h4 style="text-align:center;">Here is my resume:</h4>
-<div style="text-align:center">
-<iframe src="https://docs.google.com/document/d/1I69Fo2EG_zR0XbW29sfnJmJWJO0LARwpW9cfoP7b8SI/pub?embedded=true" class="mobileHide" style="width:80%;height:80%;text-align:center;"></iframe>
-<br />
-</div>
-<p style="text-align:center">
-  Click <a href="" id="resume" onclick='window.open("https://docs.google.com/document/d/1I69Fo2EG_zR0XbW29sfnJmJWJO0LARwpW9cfoP7b8SI/edit?usp=sharing");return false;'>here</a> for a downloadable copy
-</p>
-</div>
-</div>
-<div class="col-md-1"></div>
-
 {% endblock %}

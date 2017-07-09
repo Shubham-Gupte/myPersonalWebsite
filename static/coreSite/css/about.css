@@ -1,3 +1,10 @@
 a#topText.About {
   color:red;
 }
+body { padding-top: 60px;
+  font-family: 'Roboto Condensed', sans-serif; 
+}
+body.container-fluid {
+    padding-left:0;
+    padding-right:0;
+}

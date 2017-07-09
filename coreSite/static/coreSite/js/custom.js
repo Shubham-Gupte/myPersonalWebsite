@@ -1,4 +1,12 @@
 $(document).ready(function() {
+  $("#redabout").slideUp(1);
+  $("#redabout").delay(100).slideDown(1000);
+
+  $("#blueabout").slideUp(1);
+  $("#blueabout").delay(100).slideDown(1000);
+
+  $("#greenabout").slideUp(1);
+  $("#greenabout").delay(100).slideDown(1000);
   $('#jsWrapper').hide(0).delay(100).fadeIn(1000);
   $('#resume').click(function(e) {
     e.preventDefault();
