@@ -1,0 +1,54 @@
+{% extends 'coreSite/base.html' %}
+{% load staticfiles %}
+{% block title %} More Life {% endblock %}
+{% block links%}
+<link rel="stylesheet" href="{% static 'coreSite/css/about1.css' %}" type="text/css" />
+{% endblock %}
+{% block content %}
+<section class="timeline">
+  <ul>
+    <li>
+      <div>
+        <time>June 16, 1998:</time> I was born at Gwinnett Medical Center in Lawrenceville, GA.
+      </div>
+    </li>
+    <li>
+      <div>
+        <time>2012:</time> Began High School at GSMST. This is where I picked up my first taste of programming.
+      </div>
+    </li>
+    <li>
+      <div>
+        <time>May 2016:</time> Time went by quickly and before I knew it I was graduating GSMST.
+      </div>
+    </li>
+    <li>
+      <div>
+        <time>August 2016:</time> I began college at Georgia State. I started as a Computer Science major. I picked up an interest in pool here.
+      </div>
+    </li>
+    <li>
+      <div>
+        <time>January 2017:</time> During college I had gone to 3 hackathons. I ended up winning my 3rd hackathon: UGA Hacks.
+      </div>
+    </li>
+    <li>
+      <div>
+        <time>June 15, 2017:</time> The day before my birthday I found out that I had been accepted as a transfer to the Georgia Institute of Technology.
+      </div>
+    </li>
+    <li>
+      <div>
+        <time>Now:</time> I'm probably programming, bowling, listening to music, playing pool, driving, or doing a combination of those things.
+      </div>
+    </li>
+  </ul>
+</section>
+<div class="col-md-6">
+<h1>Hobbies</h1>
+</div>
+<div class="col-md-6">
+<h1>Interests</h1>
+</div>
+
+{% endblock %}

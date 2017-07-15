@@ -7,6 +7,7 @@ body { padding-top: 60px;
 body.container-fluid {
     padding-left:0;
     padding-right:0;
+    padding-bottom: 0;
 }
 #redcol{
   background-color: #2ec4b6;
@@ -31,4 +32,7 @@ body.container-fluid {
 }
 .col-md-2{
   min-height: fill-available;
+}
+#iframedoc{
+  text-align:center;
 }
