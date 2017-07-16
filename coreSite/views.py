@@ -29,4 +29,4 @@ def contact(request):
         form = ContactForm()
     return render(request, 'coreSite/contact.html', {'form': form})
 def blog(request):
-    return HttpResponse("Blog")
+    return render(request, 'coreSite/blog.html', {})

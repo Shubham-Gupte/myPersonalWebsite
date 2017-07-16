@@ -1,4 +1,44 @@
 $(document).ready(function() {
+  function isElementInViewport(el) {
+  var rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
+var items = document.querySelectorAll(".timeline li");
+
+// code for the isElementInViewport function
+
+function callbackFunc() {
+  for (var i = 0; i < items.length; i++) {
+    if (isElementInViewport(items[i])) {
+      items[i].classList.add("in-view");
+    }
+  }
+}
+
+window.addEventListener("load", callbackFunc);
+window.addEventListener("scroll", callbackFunc);
+$(".timeline").slideUp(1);
+$(".timeline").delay(100).slideDown(1000);
+
+$("#leftblue").slideUp(1);
+$("#leftblue").delay(100).slideDown(1000);
+
+$("#rightblue").slideUp(1);
+$("#rightblue").delay(100).slideDown(1000);
+
+  $("#redabout").slideUp(1);
+  $("#redabout").delay(100).slideDown(1000);
+
+  $("#blueabout").slideUp(1);
+  $("#blueabout").delay(100).slideDown(1000);
+
+  $("#greenabout").slideUp(1);
+  $("#greenabout").delay(100).slideDown(1000);
   $('#jsWrapper').hide(0).delay(100).fadeIn(1000);
   $('#resume').click(function(e) {
     e.preventDefault();

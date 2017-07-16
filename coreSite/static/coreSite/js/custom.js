@@ -24,6 +24,13 @@ window.addEventListener("load", callbackFunc);
 window.addEventListener("scroll", callbackFunc);
 $(".timeline").slideUp(1);
 $(".timeline").delay(100).slideDown(1000);
+
+$("#leftblue").slideUp(1);
+$("#leftblue").delay(100).slideDown(1000);
+
+$("#rightblue").slideUp(1);
+$("#rightblue").delay(100).slideDown(1000);
+
   $("#redabout").slideUp(1);
   $("#redabout").delay(100).slideDown(1000);
 
