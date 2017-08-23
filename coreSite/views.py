@@ -4,14 +4,10 @@ from .forms import ContactForm
 from django.contrib import messages
 from .functions import sendEmail
 # Create your views here.
-def moreabout(request):
-    return render(request, 'coreSite/moreabout.html', {})
 def projects(request):
     return HttpResponse("Under Development")
 def home(request):
     return render(request, 'coreSite/index.html', {})
-def about(request):
-    return render(request, 'coreSite/about.html',{})
 def contact(request):
     if request.method == 'POST':
         form = ContactForm(request.POST)
