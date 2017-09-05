@@ -1,0 +1,52 @@
+{% extends 'coreSite/base.html' %} {% load staticfiles %} {% block title %} Contact Me {% endblock %} {% block links %}
+<link rel="stylesheet" type="text/css" href="{% static 'coreSite/css/contact.css' %}" /> {% endblock %} {% block content %}
+<div class="text-left">
+<h1 style="font-family: 'Roboto Condensed', sans-serif;color:white;font-size:8em;">  <img src="{% static 'coreSite/images/contactImage.png'%}" class="img-thumbnail" id="contactImage" align="middle">
+  Contact</h1>
+</div>
+<br>
+<div class="row">
+  <div class="col-md-2"></div>
+  <div class="col-md-4" id="content">
+    <h1 style="font-family: 'Roboto Condensed', sans-serif;"> Send me a quick message!</h1>
+    <form action="/ContactMe/" method="post">
+      {% csrf_token %}
+      <div id="formField">{{ form.sender }}</div>
+        <br />
+        <br />
+    <div id="formField">  {{ form.subject }}</div>
+    <br />
+    <br>
+      <div id="formField">{{ form.message }}</div>
+      <br />
+      <input type="submit" value="Submit" id="submitButton"/>
+  </form>
+  </div>
+  <div class="col-md-4">
+    <h3>Email:</h3>
+    <a id="mailer">
+      <p id="contactText">
+        shubham@gupte.me
+      </p>
+    </a>
+    <h3>Phone:</h3>
+    <p id="contactText">
+      404-717-6526
+    </p>
+    <h3>Location:</h3>
+    <p id="contactText">
+      Atlanta, GA
+    </p>
+    <h3>Profiles:</h3>
+    <div id="content">
+      <a href="https://github.com/Shubham-Gupte"><img src="{% static 'coreSite/images/Octocat.jpg'%}" class="img-responsive"  style="display:inline-block;"/></a>
+      <a href="{% url 'blog' %}"><img src="{% static 'coreSite/images/fb.png'%}" class="img-responsive" style="display:inline-block;" /></a>
+      <a href="https://twitter.com/Shaboom_G"><img src="{% static 'coreSite/images/twitter.png'%}" class="img-responsive" style="display:inline-block;" /></a>
+    </div>
+    <a href="https://www.linkedin.com/in/shubham-gupte/"><img src="{% static 'coreSite/images/linkedin.png'%}" class="img-responsive" id= "content" style="margin-left: auto;
+	margin-right: auto;
+	display: block;"/></a>
+  </div>
+  <div class="col-md-2">
+</div>
+{% endblock %}

@@ -1,0 +1,72 @@
+{% extends 'coreSite/base.html' %} {% load staticfiles %} {% block title %} About Me {% endblock %} {% block links %}
+<link rel="stylesheet" type="text/css" href="{% static 'coreSite/css/about.css' %}" />
+{% endblock %} {% block content %}
+<div id="redabout">
+  <div id="redcol" class="col-md-12">
+  <div id="redcol" class="col-md-1"></div>
+  <div id="redcol" class="col-md-8" style="padding-bottom:5px;">
+    <h2>Quick Rundown</h2>
+    <p>
+      I'm a college student from Atlanta attending Georgia Tech for Computational Media. During high school, I learned some programming from robotics as well as some basic web development. I enjoy programming, especially working on sites such as this one or just learning. If there isn't something I know, I am always eager to learn. If you'd like to see what I'm up to, be sure to check out my blog posts. If you'd like to work on a project, let's talk. :)
+    </p>
+    <a href="{% url 'moreabout' %}"><button class="btn btn-primary" >Learn More About Me</button></a>
+    <br />
+  </div>
+  <div id="redcol" class="col-md-3">
+    <img src="{% static 'coreSite/images/gt.png'%}"/>
+  </div>
+  </div>
+</div>
+<div id="blueabout">
+  <div id="bluecol" class="col-md-12">
+  <div id="bluecol" class="col-md-1"></div>
+  <div id="bluecol" class="col-md-4" style="padding-bottom:5px;">
+    <h1>Skills</h1>
+    <ul>
+      <li>
+        Web Development
+      </li>
+      <li>
+        Django (What this site is built on)
+      </li>
+      <li>
+        POSTGRE SQL
+      </li>
+      <li>
+        Basic Robotics
+      </li>
+      <li> Amateur Film-maker</li>
+      <li>
+        Basic 3D modeling
+      </li>
+      <li>
+        Flask
+      </li>
+    </ul>
+    <a href="{%url 'projects'%}"><button class="btn btn-primary" >My Projects</button></a>
+    <br />
+  </div>
+  <div id="bluecol" class="col-md-7">
+    <br />
+
+    <img src="{% static 'coreSite/images/django.png' %}" class="mobileHide"/>
+  </div>
+  </div>
+</div>
+<div id="greenabout">
+  <div id="greencol" class="col-md-12">
+  <div id="greencol" class="col-md-1"> </div>
+  <div id="greencol" class="col-md-9"><h1>Resume</h1>
+  <h4 class="mobileHide">Here is my resume:</h4>
+  <div id ="iframedoc">
+  <iframe src="https://docs.google.com/document/d/1I69Fo2EG_zR0XbW29sfnJmJWJO0LARwpW9cfoP7b8SI/pub?embedded=true"style="width:80%;height:100%;"class="mobileHide"></iframe>
+  </div>
+  <br />
+  <div style="text-align:center;">
+  <a href="" id="resume" onclick='window.open("https://docs.google.com/document/d/1I69Fo2EG_zR0XbW29sfnJmJWJO0LARwpW9cfoP7b8SI/edit?usp=sharing");return false;'><button class="btn btn-primary" >Click Here for a downloadable copy.</button></a>
+  </div>
+  <br />
+  <div id="greencol" class="col-md-2"></div>
+  </div>
+</div>
+{% endblock %}

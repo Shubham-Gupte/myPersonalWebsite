@@ -1,0 +1,102 @@
+{% extends 'coreSite/base.html' %}
+{% load staticfiles %}
+{% block title %} More Life {% endblock %}
+{% block links%}
+<link rel="stylesheet" href="{% static 'coreSite/css/about1.css' %}" type="text/css" />
+{% endblock %}
+{% block content %}
+<section class="timeline">
+  <ul>
+    <li>
+      <div>
+        <time>June 16, 1998:</time> I was born at Gwinnett Medical Center in Lawrenceville, GA.
+      </div>
+    </li>
+    <li>
+      <div>
+        <time>2012:</time> Began High School at GSMST. This is where I picked up my first taste of programming.
+      </div>
+    </li>
+    <li>
+      <div>
+        <time>May 2016:</time> Time went by quickly and before I knew it I was graduating GSMST.
+      </div>
+    </li>
+    <li>
+      <div>
+        <time>August 2016:</time> I began college at Georgia State. I started as a Computer Science major. I picked up an interest in pool here.
+      </div>
+    </li>
+    <li>
+      <div>
+        <time>January 2017:</time> During college I had gone to 3 hackathons. I ended up winning my 3rd hackathon: UGA Hacks.
+      </div>
+    </li>
+    <li>
+      <div>
+        <time>June 15, 2017:</time> The day before my birthday I found out that I had been accepted as a transfer to the Georgia Institute of Technology.
+      </div>
+    </li>
+    <li>
+      <div>
+        <time>Now:</time> I'm probably programming, bowling, listening to music, playing pool, driving, or doing a combination of those things.
+        <a href="{%url 'blog'%}"><button class="btn btn-primary" >My Blog</button></a>
+      </div>
+    </li>
+  </ul>
+</section>
+<div>
+  <div id ="leftblue" class= "col-md-6">
+    <u><h1>Hobbies and Interests</h1></u>
+    <ul>
+      <li>
+        Listening to Music
+      </li>
+      <li>
+        Driving/ Cars
+      </li>
+      <li>
+        Programming
+      </li>
+      <li>
+        Playing Basketball
+      </li>
+      <li>
+        FOOD
+      </li>
+      <li>
+        Pool
+      </li>
+      <li>
+        Bowling
+      </li>
+    </ul>
+  </div>
+  <div class="col-md-6" id="rightblue">
+<u><h1>Fun Facts</h1></u>
+<ul >
+<li>
+  I enjoy hip hop music as well as some rock. If I could join any group, it would be Odd Future.
+</li>
+<li>
+  I want to buy a 2007 Subaru Impreza WRX Sti after I finish college.
+</li>
+<li>
+  My favorite language is Python
+</li>
+<li>
+  My favorite Basketball player is Kobe Bryant.
+</li>
+<li>
+  I love Butter Chicken. (Just the one my mom makes though)
+</li>
+<li>
+  I picked up Pool at Georgia State
+</li>
+<li>
+  I prefer to bowl like Jason Belmonte (2 hands)
+</li>
+</ul>
+  </div>
+</div>
+{% endblock %}
