@@ -16,4 +16,4 @@ urllib3==1.21.1
 
 Used this for the timeline: https://webdesign.tutsplus.com/tutorials/building-a-vertical-timeline-with-css-and-a-touch-of-javascript--cms-26528
 
-
+Used Bootstrap template to setup js page layout
