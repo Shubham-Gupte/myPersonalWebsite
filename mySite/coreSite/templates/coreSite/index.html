@@ -108,10 +108,10 @@
       </div>
     </section>
 
-    <!-- About Section -->
-    <section class="success" id="about">
+    <!-- Blog  Section -->
+    <section class="success" id="blog">
       <div class="container">
-        <h2 class="text-center">About</h2>
+        <h2 class="text-center">Blog</h2>
         <hr class="star-light">
         <div class="row">
           <div class="col-lg-4 ml-auto">
@@ -132,21 +132,31 @@
 
        <!-- About Section -->
     <section class="success" id="about">
+      <div style="text-align:center">
+      <img class="img-fluid" src="{% static 'coreSite/img/about.png' %}" alt="" style ="text-align:center;">
+</div>
       <div class="container">
         <h2 class="text-center">About</h2>
         <hr class="star-light">
         <div class="row">
-          <div class="col-lg-4 ml-auto">
-            <p>Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional LESS stylesheets for easy customization.</p>
+          <div class="col-lg-12 ml-auto">
+            <p>I am a Georgia Tech student studying Computer Science.
+              During high school, I learned programming from robotics as well as basic web development. I enjoy programming, especially working on sites such as this one or just learning. I am always eager to learn what I don't know. If you'd like to see what I'm up to, check out my blog posts. If you'd like to work on a project, let's talk. :)</p>
           </div>
-          <div class="col-lg-4 mr-auto">
-            <p>Whether you're a student looking to showcase your work, a professional looking to attract clients, or a graphic artist looking to share your projects, this template is the perfect starting point!</p>
-          </div>
+          <div style="width:100%">
           <div class="col-lg-8 mx-auto text-center">
             <a href="#" class="btn btn-lg btn-outline">
-              <i class="fa fa-download"></i>
-              Download Theme
+              <i class="fa fa-telegram"></i>
+            Skills and more About Me
             </a>
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            <a href="#" class="btn btn-lg btn-outline">
+              <i class="fa fa-download"></i>
+             View my Resume
+            </a>
+          </div>
           </div>
         </div>
       </div>
@@ -159,24 +169,27 @@
         <h2 class="text-center">Contact Me</h2>
         <hr class="star-primary">
         <div class="row">
-          <div class="col-lg-8 mx-auto">
-            <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
-            <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
-             <form action="/ContactMe/" method="post">
-      {% csrf_token %}
-      <div id="formField">{{ form.sender }}</div>
-        <br />
-        <br />
-    <div id="formField">  {{ form.subject }}</div>
-    <br />
-    <br>
-      <div id="formField">{{ form.message }}</div>
-      <br />
-      <input type="submit" value="Submit" id="submitButton"/>
-  </form>
-          </div>
-        </div>
-      </div>
+          <div class="col-lg-8 mx-auto" >
+            <div style = "text-align:left;display:inline-block">
+            <h3>Email:</h3>
+    <a id="mailer">
+      <p id="contactText">
+       <a href="mailto:shubham@gupte.me"> shubham@gupte.me</a>
+      </p>
+        <p id="contactText">
+          <a href="mailto:shubhamg@gatech.edu"> shubhamg@gatech.edu </a>
+             </a>
+      </p>
+</div>
+<div style = "float:right;display:inline-block;">
+    <h3>Phone:</h3>
+    <p id="contactText">
+      404-717-6526
+    </p>
+</div>
+<div style = "text-align:center;">
+    <img class="img-fluid img-centered" src="{% static 'coreSite/img/gt.png' %}" alt="" >
+</div>
     </section>
 
     <!-- Footer -->
@@ -186,43 +199,46 @@
           <div class="row">
             <div class="footer-col col-md-4">
               <h3>Location</h3>
-              <p>3481 Melrose Place
-                <br>Beverly Hills, CA 90210</p>
+              <p>
+                Atlanta, GA </p>
             </div>
             <div class="footer-col col-md-4">
               <h3>Around the Web</h3>
               <ul class="list-inline">
                 <li class="list-inline-item">
-                  <a class="btn-social btn-outline" href="#">
+                  <a class="btn-social btn-outline" href="https://www.facebook.com/siberianShephard">
                     <i class="fa fa-fw fa-facebook"></i>
                   </a>
                 </li>
                 <li class="list-inline-item">
-                  <a class="btn-social btn-outline" href="#">
-                    <i class="fa fa-fw fa-google-plus"></i>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a class="btn-social btn-outline" href="#">
-                    <i class="fa fa-fw fa-twitter"></i>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a class="btn-social btn-outline" href="#">
+                  <a class="btn-social btn-outline" href="https://www.linkedin.com/in/shubham-gupte/">
                     <i class="fa fa-fw fa-linkedin"></i>
                   </a>
                 </li>
-                <li class="list-inline-item">
-                  <a class="btn-social btn-outline" href="#">
-                    <i class="fa fa-fw fa-dribbble"></i>
+
+                <!--Github
+                    devpost
+                    blog-->
+                 <li class="list-inline-item">
+                  <a class="btn-social btn-outline" href="https://www.github.com/Shubham-Gupte/">
+                    <i class="fa fa-fw fa-github"></i>
                   </a>
-                </li>
+                 </li>
+                  <li class="list-inline-item">
+                  <a class="btn-social btn-outline" href="https://devpost.com/ShuBook">
+                    <i class="fa fa-fw fa-users"></i>
+                  </a>
+                  </li>
+                   <li class="list-inline-item">
+                  <a class="btn-social btn-outline" href="{% url 'blog' %}">
+                    <i class="fa fa-fw fa-rss"></i>
+                  </a>
+                   </li>
               </ul>
             </div>
             <div class="footer-col col-md-4">
-              <h3>About Freelancer</h3>
-              <p>Freelance is a free to use, open source Bootstrap theme created by
-                <a href="http://startbootstrap.com">Start Bootstrap</a>.</p>
+              <h3>About this Site</h3>
+              <p>This site was created using Django and Bootstrap's FreeLancer.
             </div>
           </div>
         </div>
