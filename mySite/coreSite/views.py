@@ -5,3 +5,5 @@ def home(request):
     return render(request, 'coreSite/index.html', {})
 def blog(request):
     return HttpResponse("Blog")
+def moreAbout(request):
+    return render(request, 'coreSite/about.html', {})

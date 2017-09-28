@@ -1,0 +1,141 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>About Me</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="{% static 'coreSite/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'coreSite/css/about.css' %}" rel="stylesheet" type="text/css">
+  <!-- Custom fonts for this template -->
+  <link href="{% static 'coreSite/vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+  <!-- Custom styles for this template -->
+  <link href="{% static 'coreSite/css/freelancer.min.css' %}" rel="stylesheet">
+
+</head>
+
+<body id="page-top" style="background-color:#258EA6">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light navbar-fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">Shubham Gupte</a>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="{% url 'home'%}">Home</a>
+          </li>
+        </ul>
+    </div>
+  </nav>
+
+  <div class="col-sm-4 portfolio-item" style="display:inline-block;float:left;background-color:#258EA6; height:100%;">
+    <h2 style="padding-left:30px;">Skills</h2>
+    <ul style="padding-left:70px;">
+      <li>
+        Web Development
+      </li>
+      <li>
+        Django (What this site is built on)
+      </li>
+      <li>
+        POSTGRE SQL
+      </li>
+      <li>
+        Basic Robotics
+      </li>
+      <li> Amateur Film-maker</li>
+      <li>
+        Basic 3D modeling
+      </li>
+      <li>
+        Flask
+      </li>
+    </ul>
+    <img src="{% static 'coreSite/img/django.png' %}" />
+  </div>
+  <div class="col-sm-8 portfolio-item" style="display:inline-block;float:right;padding-left:0px;padding-right:0px;background-color:#549F93;">
+    <section class="timeline" style="padding-top:0px;padding-bottom:10px;">
+      <ul>
+    <li>
+      <div>
+        <time>June 16, 1998:</time> I was born at Gwinnett Medical Center in Lawrenceville, GA.
+      </div>
+    </li>
+    <li>
+      <div>
+        <time>2012:</time> Began High School at GSMST. This is where I picked up my first taste of programming.
+      </div>
+    </li>
+    <li>
+      <div>
+        <time>May 2016:</time> Time went by quickly and before I knew it I was graduating GSMST.
+      </div>
+    </li>
+    <li>
+      <div>
+        <time>August 2016:</time> I began college at Georgia State. I started as a Computer Science major. I picked up an interest in pool here.
+      </div>
+    </li>
+    <li>
+      <div>
+        <time>January 2017:</time> During college I had gone to 3 hackathons. I ended up winning my 3rd hackathon: UGA Hacks.
+      </div>
+    </li>
+    <li>
+      <div>
+        <time>June 15, 2017:</time> The day before my birthday I found out that I had been accepted as a transfer to the Georgia Institute of Technology.
+      </div>
+    </li>
+    <li>
+      <div>
+        <time>Now:</time> I'm probably programming, bowling, listening to music, playing pool, driving, or doing a combination of those things.
+        <a href="/Blog/"><button class="btn btn-primary" >My Blog</button></a>
+      </div>
+    </li>
+  </ul>
+    </section>
+  </div>
+</body>
+<script>
+(function() {
+
+  'use strict';
+
+  // define variables
+  var items = document.querySelectorAll(".timeline li");
+
+  // check if an element is in viewport
+  // http://stackoverflow.com/questions/123999/how-to-tell-if-a-dom-element-is-visible-in-the-current-viewport
+  function isElementInViewport(el) {
+    var rect = el.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }
+
+  function callbackFunc() {
+    for (var i = 0; i < items.length; i++) {
+      if (isElementInViewport(items[i])) {
+        items[i].classList.add("in-view");
+      }
+    }
+  }
+
+  // listen for events
+  window.addEventListener("load", callbackFunc);
+  window.addEventListener("resize", callbackFunc);
+  window.addEventListener("scroll", callbackFunc);
+
+})();
+</script>
