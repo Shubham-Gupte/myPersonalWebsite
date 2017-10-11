@@ -70,6 +70,7 @@
       <div class="container">
         <h2 class="text-center">Portfolio</h2>
         <hr class="star-primary">
+        <h5 style="text-align:center;"> My 3 latest projects: </h5>
         <div class="row">
           <div class="col-sm-4 portfolio-item">
             <a class="portfolio-link" href="#portfolioModal1" data-toggle="modal">
@@ -114,13 +115,10 @@
         <h2 class="text-center">Blog</h2>
         <hr class="star-light">
         <div style="text-align:center">
-        <p> Just posts about what's happening in my life.</p>
-        <p>Here's my last post:</p>
-     <h1><a href="">{{ posts.title }}</a></h1>
+        <p> Just posts about what's happening in my life, here's my last post:</p>
+     <h1><a href="" style="color:white;"><u>{{ posts.title }}</u></a></h1>
      <img src ="{{ posts.img.url }}" >
      <p>{{ posts.text|linebreaksbr }}</p>
-        <p> - Shubham Gupte</p>
-        <p>{{ posts.published_date }}</p>
   </div>
 
 
