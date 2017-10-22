@@ -3,5 +3,6 @@ from . import views
 
 urlpatterns = [
 url(r'^$', views.home, name='home'),
-url(r'About/$', views.moreAbout, name = 'moreAbout')
+url(r'About/$', views.moreAbout, name = 'moreAbout'),
+url(r'Visual/$', views.postJSON, name = 'postJSON')
 ]

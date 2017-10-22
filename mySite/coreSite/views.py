@@ -9,3 +9,5 @@ def home(request):
     return render(request, 'coreSite/index.html', {'posts':posts})
 def moreAbout(request):
     return render(request, 'coreSite/about.html', {})
+def postJSON(request):
+    return render(request, 'coreSite/Visual.html')
